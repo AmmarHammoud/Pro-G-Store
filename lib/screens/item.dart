@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pro_g_store/shared/constants.dart';
 
@@ -25,19 +26,24 @@ class Item extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: screenWidth*0.15,
-                height: screenHeight*0.11,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  color: Colors.grey[300],
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15.0),
-                  child: Image(
-                    //fit: BoxFit.cover,
-                    fit: BoxFit.fill,
-                    image: NetworkImage(image),
+              Expanded(
+                child: Container(
+                  width:
+                      isMobile(context) ? screenWidth * 0.15 : screenWidth * 0.13,
+                  height: isMobile(context)
+                      ? screenHeight * 0.11
+                      : screenHeight * 0.3,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Colors.grey[300],
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0),
+                    child: Image(
+                      fit: BoxFit.fill,
+                      //fit: BoxFit.fill,
+                      image: NetworkImage(image),
+                    ),
                   ),
                 ),
               ),

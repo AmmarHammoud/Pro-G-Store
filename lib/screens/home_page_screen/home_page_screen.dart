@@ -22,18 +22,21 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Games'),
-            ItemsList(condition: 1 == 1, list: items),
-            Text('Movies'),
-            ItemsList(condition: 1 == 1, list: items),
-            Text('Courses'),
-            ItemsList(condition: 1 == 1, list: items),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Games'),
+              ItemsList(condition: 1 == 1, list: items),
+              Text('Movies'),
+              ItemsList(condition: 1 == 1, list: items),
+              Text('Courses'),
+              ItemsList(condition: 1 == 1, list: items),
+            ],
+          ),
         ),
       ),
     );
