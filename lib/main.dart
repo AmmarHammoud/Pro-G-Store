@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pro_g_store/screens/home_page_screen/home_page_screen.dart';
+import 'package:pro_g_store/shared/dio_helper.dart';
 
 void main() {
+  DioHelper.init();
   runApp(const MyApp());
 }
 

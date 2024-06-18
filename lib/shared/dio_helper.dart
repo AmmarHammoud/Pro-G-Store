@@ -1,5 +1,13 @@
 import 'package:dio/dio.dart';
 
+/*
+Stack overflow:
+when running on web
+const String proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const String baseUrl = proxyUrl + "BASE_URL.com";
+* */
+//192.168.52.17 mobile
+//10.0.2.2 emulator
 class DioHelper {
   static late Dio dio;
 
@@ -17,7 +25,21 @@ class DioHelper {
   }
 
   static Future<Response> getAllGames() async {
-    return await dio.get('item/games');
+    return await dio.get(
+      'item/games',
+      // options: Options(
+      //   headers: {
+      //     "Access-Control-Allow-Origin": "*",
+      //     // Required for CORS support to work
+      //     "Access-Control-Allow-Credentials": true,
+      //     // Required for cookies, authorization headers with HTTPS
+      //     "Access-Control-Allow-Headers":
+      //         "Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,locale",
+      //     "Access-Control-Allow-Methods": "POST, OPTIONS",
+      //     "content-type": "application/json"
+      //   },
+      // ),
+    );
   }
 
   static Future<Response> getAllSeries() async {

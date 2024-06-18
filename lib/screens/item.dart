@@ -11,7 +11,7 @@ class Item extends StatelessWidget {
 
   final String title;
   final String image;
-  final int year;
+  final String year;
 
   @override
   Widget build(BuildContext context) {

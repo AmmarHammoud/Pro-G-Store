@@ -44,8 +44,8 @@ class ItemsList extends StatelessWidget {
                             aspectRatio: isMobile(context) ? 1 / 2 : 3 / 4,
                             child: Item(
                                 title: list[index].title,
-                                image: list[index].image,
-                                year: list[index].year));
+                                image:  y,
+                                year: list[index].date));
                       },
                       itemCount: list.length,
                     ),

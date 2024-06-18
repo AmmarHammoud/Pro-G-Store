@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../screens/item.dart';
 
-List<Item> items = List.generate(
-    20, (index) => Item(title: 'title$index', image: y, year: index));
+// List<Item> items = List.generate(
+//     20, (index) => Item(title: 'title$index', image: y, year: index));
 
 String movieDefaultImage = 'assets/images/movie_default_image.png';
 String gameDefaultImage = 'assets/images/game_default_image.jpg';

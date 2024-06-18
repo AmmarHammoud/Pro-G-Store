@@ -1,27 +1,30 @@
 abstract class Item {
   late int id;
-  late int categoryID;
-  late int subcategoryID;
+  late String category;
+  late String subcategory;
   late String title;
   late int size;
   late int price;
+  late String date;
 
   Item({
     required this.id,
-    required this.categoryID,
-    required this.subcategoryID,
+    required this.category,
+    required this.subcategory,
     required this.title,
     required this.size,
     required this.price,
+    required this.date,
   });
 
-  Item.fromJson(Map<String, dynamic> json){
+  Item.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['name'];
     size = json['size'];
     price = json['price'];
-    categoryID = json['category_id'];
-    subcategoryID = json['subcategory_id'];
+    category = json['category'];
+    subcategory = json['sub_category'];
+    date = json['date'].substring(0, 4);
+    //print(json['date'].runtimeType);
   }
-
 }
