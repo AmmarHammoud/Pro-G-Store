@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pro_g_store/screens/item.dart';
 import 'package:pro_g_store/shared/components.dart';
 import 'package:pro_g_store/shared/constants.dart';
 
