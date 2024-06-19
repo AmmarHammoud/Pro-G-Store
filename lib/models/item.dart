@@ -1,3 +1,5 @@
+import '../shared/constants.dart';
+
 abstract class Item {
   late int id;
   late String category;
@@ -6,6 +8,8 @@ abstract class Item {
   late int size;
   late int price;
   late String date;
+  late String image;
+  late String description;
 
   Item({
     required this.id,
@@ -25,6 +29,8 @@ abstract class Item {
     category = json['category'];
     subcategory = json['sub_category'];
     date = json['date'].substring(0, 4);
-    //print(json['date'].runtimeType);
+    image = json['image'] ?? y;
+    description = json['description'] ??
+        'Jake Sully lives with his newfound family formed on the extrasolar moon Panfora. Once a familiar threat rreturn to finish what was previously started, Jake must work with Neytiri and army of the Navi race to protect their home';
   }
 }

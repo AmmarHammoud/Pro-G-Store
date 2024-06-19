@@ -41,15 +41,19 @@ class HomeScreen extends StatelessWidget {
                       Text('Games'),
                       ItemsList(
                           condition: state is! LoadingAllGames,
-                          list: cubit.games),
+                          items: cubit.games),
                       Text('Movies'),
                       ItemsList(
                           condition: state is! LoadingAllMovies,
-                          list: cubit.movies),
+                          items: cubit.movies),
+                      Text('Series'),
+                      ItemsList(
+                          condition: state is! LoadingAllSeries,
+                          items: cubit.series),
                       Text('Courses'),
                       ItemsList(
                           condition: state is! LoadingAllCourses,
-                          list: cubit.courses),
+                          items: cubit.courses),
                     ],
                   ),
                 ),

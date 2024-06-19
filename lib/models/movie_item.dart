@@ -20,8 +20,8 @@ class MovieItem extends Item {
   });
 
   MovieItem.fromJson(Map<String, dynamic> json) : super.fromJson(json) {
-    //rate = json['rate'];
-    //resolution = json['resolution'];
-    //lang = json['lang'];
+    rate = json['rate'];
+    resolution = json['resolution'];
+    lang = json['lang'];
   }
 }
